@@ -1,66 +1,52 @@
-## Foundry
+# 🐶 Dogie NFT - an IPFS hosted NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+An IPFS hosted ERC721 NFT.
 
-Foundry consists of:
+You can see this smart contract deployed [on Sepolia](https://sepolia.etherscan.io/address/0x480d37511041d907e2c1bf13e0f6d0e3f791bfd1) and an example of a minted Dogie NFT [on OpenSea](https://testnets.opensea.io/assets/sepolia/0x480d37511041d907e2C1bF13E0F6d0E3F791BFD1/0).
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## ⚒️ Built with Foundry
 
-## Documentation
+This project is built with [Foundry](https://github.com/foundry-rs/foundry) a portable and modular toolkit for Ethereum application development, which is required to build and deploy the project.
 
-https://book.getfoundry.sh/
+## 🏗️ Getting started
 
-## Usage
+Create a `.env` file with the following entries:
 
-### Build
-
-```shell
-$ forge build
+```
+SEPOLIA_RPC_URL=<sepolia_rpc_url>
+PRIVATE_KEY=<private_key>
+ETHERSCAN_API_KEY=<etherscan_api_key>
 ```
 
-### Test
+Install project dependencies
 
-```shell
-$ forge test
+```
+make install
 ```
 
-### Format
+Deploy the smart contract on Anvil
 
-```shell
-$ forge fmt
+```
+make anvil
+make deploy
 ```
 
-### Gas Snapshots
+Deploy the smart contract on Sepolia
 
-```shell
-$ forge snapshot
+```
+make deploy ARGS="--network sepolia"
 ```
 
-### Anvil
+## 🧪 Running tests
 
-```shell
-$ anvil
+To run against a local Anvil Ethereum node:
+
+```
+forge test
 ```
 
-### Deploy
+To run against a forked environment (e.g. a forked Sepolia testnet):
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+forge test --fork-url <sepolia_rpc_url>
 ```
