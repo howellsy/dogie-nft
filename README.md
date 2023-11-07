@@ -1,6 +1,6 @@
 # 🐶 Dogie NFT - an IPFS hosted NFT
 
-An IPFS hosted ERC721 NFT.
+An IPFS hosted ERC721 NFT leveraging OpenZeppelin's ERC721 contract.
 
 You can see this smart contract deployed [on Sepolia](https://sepolia.etherscan.io/address/0x480d37511041d907e2c1bf13e0f6d0e3f791bfd1) and an example of a minted Dogie NFT [on OpenSea](https://testnets.opensea.io/assets/sepolia/0x480d37511041d907e2C1bF13E0F6d0E3F791BFD1/0).
 
